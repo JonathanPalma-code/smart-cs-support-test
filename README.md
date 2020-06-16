@@ -104,7 +104,7 @@ end
 
 ### Bug 4:
 
-While trying to edit an employee using http://localhost:3000/companies/13/employees/4/edit, it was giving me an error saying that it *“Couldn't find Company with 'id'=13”*. 
+While trying to edit an employee on http://localhost:3000/companies/13/employees/4/edit, it was giving me an error saying that it *“Couldn't find Company with 'id'=13”*. 
 
 The ID 13 is part of the Employee ID. To track which employee you want to edit, it is required the Company and Employee’s ID. 
 I've started to check in *app/views/companies/show.html.erb* in tbody element we have:
@@ -133,6 +133,6 @@ to add on that line *@company*:
 ```
 
 so it can identify from which company you want to update the employee's data.
-When using the address again it won't give an error, because http://localhost:3000/companies/4/employees/13/edit:
+While navegating, the address won't be the same, because http://localhost:3000/companies/4/employees/13/edit:
 * Company ID ⇒ 4
 * Employee ID ⇒ 13
